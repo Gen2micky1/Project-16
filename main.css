@@ -147,7 +147,7 @@ a:any-link {
 
 .main-content {
   background-color: var(--SLATE);
-  height: 380px;
+  min-height: 380px;
   margin-top: 6.875rem;
   display: flex;
   flex-flow: column;
@@ -188,6 +188,8 @@ a:any-link {
   flex-flow: column;
   align-items: center;
   gap: 3rem;
+  position: absolute;
+  top: 380px;
 }
 
 .cta__text-content {
@@ -283,7 +285,8 @@ a:any-link {
   padding: 4rem 1.25rem 5rem 1.25rem;
   display: flex;
   flex-flow: column;
-
+  align-items: center;
+  background-color: var(--BG-WHITE);
 }
 
 .footer__equalizer {
@@ -306,11 +309,13 @@ a:any-link {
 .footer__text-content-description {
   font: var(--TEXT-PRESET-5-DSK);
   color: var(--SLATE);
+  max-width: 335px;
 }
 
 .footer__text-content-address {
   font: var(--TEXT-PRESET-5-BOLD-DSK);
   color: var(--SLATE);
+  
 }
 
 /* FOOTER LINKS */
