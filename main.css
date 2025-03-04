@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+/* || REST */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-weight: normal;
+}
+
+/* || VARIABLES */
+:root {
+  /* COLORS */
+  --CYAN: #66E2DC;
+  --ORANGE: #FA7453;
+  --YELLOW: #FFB964;
+  --WHITE: #FCFAF9;
+  --BG-WHITE: #FAFAFA;
+  --SLATE: #191826;
+
+  /* GRADIENTS */
+
+  /* TYPOGRAPHY */
+  --FF: "IBM Plex Sans", serif;
+
+  /* TEXT STYLE */
+  /* DESKTOP */
+  --TEXT-PRESET-1-DSK: bold 5.5rem/100% var(--FF);
+  --TEXT-PRESET-2-DSK: bold 4rem/100% var(--FF);
+  --TEXT-PRESET-3-DSK: bold 2.5rem/110% var(--FF);
+  --TEXT-PRESET-4-DSK: normal 1.25rem/150% var(--FF);
+  --TEXT-PRESET-5-BOLD-DSK: bold 1rem/150% var(--FF);
+  --TEXT-PRESET-5-DSK: normal 1rem/150% var(--FF);
+  --TEXT-PRESET-6-DSK: bold 1.125rem/180% var(--FF);
+
+  /* TABLET */
+  --TEXT-PRESET-1-TAB: bold 4rem/100% var(--FF);
+  --TEXT-PRESET-4-TAB: normal 1.125rem/150% var(--FF);
+
+  /* MOBILE */
+  --TEXT-PRESET-1-MOB: bold 2.5rem/100% var(--FF);
+  --TEXT-PRESET-4-MOB: normal 1rem/150% var(--FF);
+}
+
+/* || UTILITY CLASSES */
+.offscreen {
+  position: absolute;
+  left: -10000px;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.center {
+  text-align: center;
+}
+
+.responsive-image {
+  display: none;
+}
+
+/* MOBILE FIRST DESIGN */
+/* || GENERAL STYLES */
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  min-height: 100vh;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+a:any-link {
+  text-decoration: none;
+  color: black;
+}
+
+/* HEADER */
+.header {
+  max-width: 100%;
+  min-height: 504px;
+  padding: 4rem 1.25rem;
+  
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 4rem;
+
+  background-color: var(--BG-WHITE);
+  background-image: url("./Image/bg-main-mobile.png");
+  background-repeat: no-repeat;
+  background-size: 384px 655px;
+  background-position: 183px -152px;
+}
+
+.header__equalizer {
+  width: 335px;
+  height: 32px;
+}
+
+.header__hero {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 2.5rem;
+  max-width: 335px;
+}
+
+.header__hero-title {
+  font: var(--TEXT-PRESET-1-MOB);
+  color: var(--SLATE);
+  text-align: left;
+  letter-spacing: -1px;
+}
+
+.header__hero-subtext {
+  font: var(--TEXT-PRESET-4-MOB);
+  color: var(--SLATE);
+}
+
+/* MAIN */
+.main {
+  max-width: 100%;
+  min-height: 1115px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  background-color: var(--BG-WHITE);
+}
+
+.main-content {
+  background-color: var(--SLATE);
+  height: 380px;
+  margin-top: 6.875rem;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  position: relative;
+}
+
+/* MAIN HERO IMAGE */
+.main-content__image {
+  position: absolute;
+  top: -110px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.main-content__image img {
+  max-width: 208.97px;
+}
+
+/* MAIN HERO BACKGROUND IMAGE */
+.bg_pattern_two {
+  width: 312px;
+  height: 468px;
+}
+
+.bg_pattern_two img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* MAIN CTA */
+.cta {
+  background-color: var(--ORANGE);
+  min-height: 625px;
+  padding: 3rem 1.25rem;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.cta__text-content {
+  max-width: 100%;
+  display: flex;
+  flex-flow: column;
+}
+
+.cta__text-content-title {
+  font: var(--TEXT-PRESET-3-DSK);
+  color: var(--SLATE);
+  margin-bottom: 1.5rem;
+}
+
+.cta__text-content-subtext {
+  font: var(--TEXT-PRESET-4-MOB);
+  color: var(--SLATE);
+  margin-bottom: 2.5rem;
+  max-width: 335p
+}
+
+.cta__text-content-subscription {
+  width: 164px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cta__text-content-subcription-price {
+  font: var(--TEXT-PRESET-2-DSK);
+  color: var(--SLATE);
+}
+
+.cta__text-content-subcription-label {
+  font: var(--TEXT-PRESET-4-DSK);
+  color: var(--SLATE);
+}
+
+/* CTA BUTTON */
+.cta__button {
+  max-width: 100%;
+  height: 144px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cta__button-download {
+  width: 100%;
+  height: 64px;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  padding: 1rem 4.7906rem;
+  border-radius: .75rem;
+}
+
+.icon-apple,
+.icon-android {
+  width: 17px;
+  height: 20px;
+}
+
+.icon-apple img,
+.icon-android img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cta__button-label {
+  font: var(--TEXT-PRESET-6-DSK);
+}
+
+.ios {
+  background-color: var(--SLATE);
+  color: var(--WHITE);
+}
+
+.android {
+  background-color: var(--WHITE);
+  color: var(--SLATE);
+}
+
+/* FOOTER */
+.footer {
+  width: 100%;
+  min-height: 357px;
+  padding: 4rem 1.25rem 5rem 1.25rem;
+  display: flex;
+  flex-flow: column;
+
+}
+
+.footer__equalizer {
+  width: 335px;
+  height: 32px;
+  margin-bottom: 2rem;
+}
+
+.footer__content {
+  display: flex;
+  flex-flow: column;
+  gap: 2rem;
+}
+
+.footer__text-content{
+  display: flex;
+  flex-flow: column;
+}
+
+.footer__text-content-description {
+  font: var(--TEXT-PRESET-5-DSK);
+  color: var(--SLATE);
+}
+
+.footer__text-content-address {
+  font: var(--TEXT-PRESET-5-BOLD-DSK);
+  color: var(--SLATE);
+}
+
+/* FOOTER LINKS */
+.footer__social-links {
+  width: 124px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__social-link {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.footer__social-link figure img {
+  max-width: 20px;
+}

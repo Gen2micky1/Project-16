@@ -24,10 +24,6 @@
             <p class="header__hero-subtext">A system audio equalizer specifically designed for Android and iOS. Freely tune the way your music sounds with a professional grade parametric EQ & volume mixer. Control bass, mids, treble, gain control, reverb, and more!</p>
         </div>
 
-        <figure class="bg_mobile">
-            <img src="./Image/bg-main-mobile.png" alt="bg-main-mobile" width="582px" height="780px" loading="lazy">
-            <figcaption class="offscreen">bg-main-mobile</figcaption>
-        </figure>
 
         <figure class="bg_tablet responsive-image">
             <img src="./Image/bg-main-tablet.png" alt="bg-main-tablet" width="1283px" height="1108px" loading="lazy">
@@ -67,37 +63,39 @@
                 <section class="cta__text-content">
                     <h2 class="cta__text-content-title">Premium EQ</h2>
                     <p class="cta__text-content-subtext">Get expert-level control with a robust equalizer, volume mixer, and spatial audio. Take your listening experience to a whole new level and access all our incredible features!</p>
-
+    
                     <div class="cta__text-content-subscription">
                         <p class="cta__text-content-subcription-price">&dollar;4</p>
                         <p class="cta__text-content-subcription-label">/ month</p>
                     </div>
                 </section>
                 <section class="cta__button">
-                    <button class="cta__button-download ios">
+                    <button onclick="downloadIos()" class="cta__button-download ios center nowrap">
                         <figure class="icon-apple">
                             <img src="./Image/icon-apple.svg" alt="icon-apple" width="18px" height="20px" loading="lazy">
                             <figcaption class="offscreen">icon-apple</figcaption>
                         </figure>
-
+    
                         <figure class="icon-apple responsive-image">
                             <img src="./Image/icon-apple-hvr.svg" alt="icon-apple-hvr" width="18px" height="20px" loading="lazy">
                             <figcaption class="offscreen">icon-apple-hvr</figcaption>
                         </figure>
                         <p class="cta__button-label">iOS Download</p>
                     </button>
-
-                    <button class="cta__button-download android">
+    
+                    <button onclick="downloadAndroid()" class="cta__button-download android center nowrap">
                         <figure class="icon-android">
                             <img src="./Image/icon-android.svg" alt="icon-apple" width="17px" height="20px" loading="lazy">
                             <figcaption class="offscreen">icon-android</figcaption>
                         </figure>
-
+    
                         <p class="cta__button-label">Android Download</p>
                     </button>
                 </section>
             </section>
+
         </section>
+        
      </main>
 
      <footer class="footer">
