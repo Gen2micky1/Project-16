@@ -85,11 +85,12 @@ body {
   min-height: 100vh;
   max-width: 100%;
   overflow-x: hidden;
+  background-color: var(--BG-WHITE);
+  display: grid;
 }
 
 a:any-link {
   text-decoration: none;
-  color: black;
 }
 
 /* HEADER */
@@ -97,17 +98,24 @@ a:any-link {
   max-width: 100%;
   min-height: 504px;
   padding: 4rem 1.25rem;
+  margin: 0rem auto;
+
   
   display: flex;
   flex-flow: column;
   align-items: center;
   gap: 4rem;
+  position: relative;
 
-  background-color: var(--BG-WHITE);
-  background-image: url("./Image/bg-main-mobile.png");
-  background-repeat: no-repeat;
-  background-size: 384px 655px;
-  background-position: 183px -152px;
+
+}
+
+.bg_mobile {
+  position: absolute;
+  top: -152px;
+  right: -192px;
+  width: 384px;
+  height: 655px;
 }
 
 .header__equalizer {
@@ -135,24 +143,22 @@ a:any-link {
   color: var(--SLATE);
 }
 
+
 /* MAIN */
 .main {
-  max-width: 100%;
-  min-height: 1115px;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
+  max-width: 100%;;
   background-color: var(--BG-WHITE);
 }
 
 .main-content {
   background-color: var(--SLATE);
-  min-height: 380px;
-  margin-top: 6.875rem;
+  height: 380px;
+  margin: 6.875rem 0rem 39.0625rem;
   display: flex;
   flex-flow: column;
   align-items: center;
   position: relative;
+  padding: 0rem ;
 }
 
 /* MAIN HERO IMAGE */
@@ -182,6 +188,7 @@ a:any-link {
 /* MAIN CTA */
 .cta {
   background-color: var(--ORANGE);
+  width: 100%;
   min-height: 625px;
   padding: 3rem 1.25rem;
   display: flex;
@@ -190,12 +197,14 @@ a:any-link {
   gap: 3rem;
   position: absolute;
   top: 380px;
+  left: 0px;
 }
 
 .cta__text-content {
   max-width: 100%;
   display: flex;
   flex-flow: column;
+  max-width: 335px;
 }
 
 .cta__text-content-title {
@@ -241,8 +250,6 @@ a:any-link {
 .cta__button-download {
   width: 100%;
   height: 64px;
-  border: none;
-  outline: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -276,6 +283,14 @@ a:any-link {
 .android {
   background-color: var(--WHITE);
   color: var(--SLATE);
+}
+
+.main-right-bg {
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  left: 515px;
+  z-index: -1;
 }
 
 /* FOOTER */
@@ -334,4 +349,283 @@ a:any-link {
 
 .footer__social-link figure img {
   max-width: 20px;
+}
+
+/* TABLET */
+@media screen and (min-width: 768px) {
+  /* HEADER */
+  body {
+    background-image: url("./Image/bg-pattern-1-2.svg");
+    background-size: 217px 360px;
+    background-repeat: no-repeat;
+    background-position: top right;
+  }
+
+  .header {
+    min-height: 628px;
+    padding: 4rem 2.5rem;
+    
+    align-items: start;
+    gap: 8rem;
+
+  }
+
+  .header__equalizer {
+    width: 680px;
+  }
+
+  .header__hero {
+    max-width: 680px;
+  }
+
+  .header__hero-title {
+    font: var(--TEXT-PRESET-1-TAB);
+    max-width: 504px;
+  }
+
+  .header__hero-subtext {
+    font: var(--TEXT-PRESET-4-TAB);
+    max-width: 504px;
+  }
+
+  .bg_mobile {
+    display: none;
+  }
+
+  .bg_tablet {
+    display: block;
+    position: absolute;
+    top: -101px;
+    left: -192px;
+    width: 768px;
+    height: 943px;
+  }
+
+  /* MAIN */
+  .main {
+    display: grid;
+    place-content: center;
+  }
+
+  .main-content {
+    width: 680px;
+    height: 600px;
+    border-radius: .75rem;
+    margin: 12.5rem 2.75rem;
+    display: flex;
+    flex-flow: column;
+    align-items: start;
+    position: relative;
+    padding: 0rem ;
+  }
+
+  /* MAIN HERO IMAGE */
+  .main-content__image {
+    top: -114px;
+    left: 26%;
+  }
+
+  .main-content__image img {
+    max-width: 270.21px;
+  }
+
+  /* MAIN CTA */
+  .cta {
+    width: 356px;
+    min-height: auto;
+    padding: 3rem;
+    border-radius: 1rem;
+    position: absolute;
+    top: 86px;
+    left: 260px;
+  }
+
+  .cta__text-content {
+    max-width: 260px;
+  }
+
+  .cta__text-content-subtext {
+    font: var(--TEXT-PRESET-4-TAB);
+    max-width: 260px;
+  }
+   
+  /* CTA BUTTON */
+  .cta__button-download {
+    width: 260px;
+    padding: 1rem 2rem;
+  }
+
+  /* FOOTER */
+  .footer {
+    width: 100%;
+    min-height: 281px;
+    padding: 4rem 2.5rem 5rem 2.5rem;
+  }
+
+  .footer__equalizer {
+    width: 688px;
+    height: 32px;
+  }
+
+  .footer__content {
+    width: 688px;
+    flex-flow: row;
+    justify-content: space-between;
+  }
+
+  .footer__text-content-description {
+    max-width: 564px;
+  }
+}
+
+/* DESKTOP */
+@media screen and (min-width: 992px) {
+  body {
+    background-image: url("./Image/bg-pattern-1.svg");
+    background-size: 312px 468px;
+  }
+
+  /* HEADER */
+  .header {
+    min-height: 594px;
+    padding: 4rem 2.5rem;
+  }
+
+  .header__equalizer {
+    width: 1120px;
+  }
+
+  .header__hero {
+    max-width: 1120px;
+    align-items: start;
+
+  }
+
+  .header__hero-title {
+    font: var(--TEXT-PRESET-1-DSK);
+    max-width: 928px;
+  }
+
+  .header__hero-subtext {
+    font: var(--TEXT-PRESET-4-DSK);
+    max-width: 736px;
+  }
+
+  .bg_tablet {
+    display: none;
+  }
+
+  .bg_desktop {
+    display: block;
+    position: absolute;
+    top: -192px;
+    left: -51px;
+    width: 1608px;
+    height: 1779px;
+  }
+
+  /* MAIN */
+
+  .main-content {
+    width: 1120px;
+    margin: 12.5rem auto;
+    position: relative;
+  }
+
+  .bg_pattern_two {
+    position: absolute;
+    top: 0px;
+    left: 368px;
+  }
+
+  /* MAIN HERO IMAGE */
+  .main-content__image {
+    top: -121px;
+    left: 261px;
+    z-index: 1;
+  }
+
+  .main-content__image img {
+    max-width: 309px;
+  }
+
+  /* MAIN CTA */
+  .cta {
+    width: 512px;
+    padding: 3.5rem;
+    position: absolute;
+    top: 89px;
+    left: 544px;
+  }
+
+  .cta__text-content {
+    max-width: 400px;
+  }
+
+  .cta__text-content-subtext {
+    font: var(--TEXT-PRESET-4-DSK);
+    max-width: 400px;
+  }
+   
+  /* CTA BUTTON */
+  .cta__button-download {
+    width: 400px;
+    padding: 1rem 2rem;
+  }
+
+  .ios:hover .icon-apple,
+  .ios:focus-visible .icon-apple {
+    display: none;
+  }
+
+  .ios:hover .icon-apple-hvr,
+  .ios:focus-visible .icon-apple-hvr {
+    display: block;
+  }
+
+  .ios:hover ,
+  .ios:focus-visible {
+    background-color: var(--CYAN);
+    color: var(--SLATE);
+  }
+
+  .android:hover ,
+  .android:focus-visible {
+    background-color: var(--YELLOW);
+  }
+
+  /* FOOTER */
+  .footer {
+    width: 100%;
+    max-width: 1120px;
+    min-height: 281px;
+    padding: 4rem 0rem 5rem 0rem;
+    flex-flow: row;
+    align-items: center;
+    margin: 0px auto;
+  }
+
+  .footer__equalizer {
+    width: 272px;
+  }
+
+  .footer__content {
+    width: 848px;
+  }
+
+  .footer__text-content-description {
+    max-width: 561px;
+  }
+
+  .footer__social-link:hover .social-link__org,
+  .footer__social-link:focus-visible .social-link__org {
+    display: none;
+  }
+
+  .footer__social-link:hover .social-link__hvr,
+  .footer__social-link:focus-visible .social-link__hvr {
+    display: block;
+  }
+
+  
 }
