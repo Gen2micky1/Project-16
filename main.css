@@ -118,10 +118,10 @@ a:any-link {
 
 .bg_mobile {
   position: absolute;
-  top: -152px;
-  right: -192px;
-  width: 384px;
-  height: 655px;
+  top: 0;
+  right:0;
+  width: 192px;
+  height: 504px;
 }
 
 .header__equalizer {
@@ -487,8 +487,8 @@ a:any-link {
 /* DESKTOP */
 @media screen and (min-width: 992px) {
   body {
-    background-image: url("./Image/bg-pattern-1.svg");
-    background-size: 312px 468px;
+    background-image: url("./Image/bg-pattern-1-1.svg");
+    background-size: 312px 428px;
   }
 
   /* HEADER */
