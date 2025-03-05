@@ -86,7 +86,6 @@ body {
   max-width: 100%;
   overflow-x: hidden;
   background-color: var(--BG-WHITE);
-  display: grid;
 }
 
 a:any-link {
@@ -96,6 +95,14 @@ a:any-link {
 /* HEADER */
 .header {
   max-width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+
+}
+
+.header-container {
+  max-width: 100%;
   min-height: 504px;
   padding: 4rem 1.25rem;
   margin: 0rem auto;
@@ -103,10 +110,9 @@ a:any-link {
   
   display: flex;
   flex-flow: column;
-  align-items: center;
+  align-items: start;
   gap: 4rem;
   position: relative;
-
 
 }
 
@@ -361,7 +367,7 @@ a:any-link {
     background-position: top right;
   }
 
-  .header {
+  .header-container {
     min-height: 628px;
     padding: 4rem 2.5rem;
     
@@ -486,7 +492,7 @@ a:any-link {
   }
 
   /* HEADER */
-  .header {
+  .header-container {
     min-height: 594px;
     padding: 4rem 2.5rem;
   }
