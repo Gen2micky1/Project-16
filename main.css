@@ -245,7 +245,7 @@ a:any-link {
 
 /* CTA BUTTON */
 .cta__button {
-  max-width: 100%;
+  max-width: 335px;
   height: 144px;
   display: flex;
   flex-flow: column;
@@ -255,7 +255,7 @@ a:any-link {
 
 .cta__button-download {
   width: 100%;
-  height: 64px;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -266,7 +266,7 @@ a:any-link {
 
 .icon-apple,
 .icon-android {
-  width: 17px;
+  max-width: 17px;
   height: 20px;
 }
 
